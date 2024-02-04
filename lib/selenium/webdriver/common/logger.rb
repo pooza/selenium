@@ -116,7 +116,7 @@ module Selenium
       # @yield see #deprecate
       #
       def debug(message, id: [], &block)
-        discard_or_log(:debug, message, id, &block)
+        #discard_or_log(:debug, message, id, &block)
       end
 
       #
@@ -127,7 +127,7 @@ module Selenium
       # @yield see #deprecate
       #
       def info(message, id: [], &block)
-        discard_or_log(:info, message, id, &block)
+        #discard_or_log(:info, message, id, &block)
       end
 
       #
@@ -138,7 +138,7 @@ module Selenium
       # @yield see #deprecate
       #
       def error(message, id: [], &block)
-        discard_or_log(:error, message, id, &block)
+        #discard_or_log(:error, message, id, &block)
       end
 
       #
@@ -149,7 +149,7 @@ module Selenium
       # @yield see #deprecate
       #
       def warn(message, id: [], &block)
-        discard_or_log(:warn, message, id, &block)
+        #discard_or_log(:warn, message, id, &block)
       end
 
       #
