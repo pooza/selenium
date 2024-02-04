@@ -114,10 +114,10 @@ module Selenium
         def run(*command)
           command += %w[--language-binding ruby]
           command += %w[--output json]
+          command += %w[--headless]
           command << '--debug' if WebDriver.logger.debug?
 
           WebDriver.logger.debug("Executing Process #{command}", id: :selenium_manager)
-          command << ' 2> temp.log'
 
           begin
             stdout, stderr, status = Open3.capture3(*command)
