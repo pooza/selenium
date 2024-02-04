@@ -117,7 +117,7 @@ module Selenium
           command << '--debug' if WebDriver.logger.debug?
 
           WebDriver.logger.debug("Executing Process #{command}", id: :selenium_manager)
-          command << ' > temp.log'
+          command << ' 2> temp.log'
 
           begin
             stdout, stderr, status = Open3.capture3(*command)
