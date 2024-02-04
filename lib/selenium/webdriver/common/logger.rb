@@ -181,7 +181,7 @@ module Selenium
       private
 
       def create_logger(name, level:)
-        logger = ::Logger.new($stderr)
+        logger = ::Logger.new($stdout)
         logger.progname = name
         logger.level = level
         logger.formatter = proc do |severity, time, progname, msg|
