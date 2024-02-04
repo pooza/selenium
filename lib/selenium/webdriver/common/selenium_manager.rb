@@ -119,6 +119,7 @@ module Selenium
           WebDriver.logger.debug("Executing Process #{command}", id: :selenium_manager)
 
           begin
+            puts command
             stdout, stderr, status = Open3.capture3(*command)
           rescue StandardError => e
             raise Error::WebDriverError, "Unsuccessful command executed: #{command}; #{e.message}"
@@ -133,7 +134,7 @@ module Selenium
           result = json_output['result']
           return result unless status.exitstatus.positive?
 
-          raise Error::WebDriverError, "Unsuccessful command executed: #{command}\n#{result}#{stderr}"
+          #raise Error::WebDriverError, "Unsuccessful command executed: #{command}\n#{result}#{stderr}"
         end
       end
     end # SeleniumManager
