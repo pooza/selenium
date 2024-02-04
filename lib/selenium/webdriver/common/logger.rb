@@ -208,7 +208,7 @@ module Selenium
         msg = id.empty? ? message : "[#{id.map(&:inspect).join(', ')}] #{message} "
         msg += " #{yield}" if block_given?
 
-        # @logger.send(level) { msg }
+        @logger.send(level) { msg }
       end
     end # Logger
   end # WebDriver

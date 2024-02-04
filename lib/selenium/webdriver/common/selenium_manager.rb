@@ -127,7 +127,7 @@ module Selenium
           json_output = stdout.empty? ? {} : JSON.parse(stdout)
           (json_output['logs'] || []).each do |log|
             level = log['level'].casecmp('info').zero? ? 'debug' : log['level'].downcase
-            WebDriver.logger.send(level, log['message'], id: :selenium_manager)
+            #WebDriver.logger.send(level, log['message'], id: :selenium_manager)
           end
 
           result = json_output['result']
